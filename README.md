@@ -32,3 +32,6 @@ Make sure to select the variant of the board with `EMT`.
 ### Installation
 
 Place the Galaxia folder on the `Libraries` folder of the sketchbook.
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rei-vilo/galaxialibrary/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
