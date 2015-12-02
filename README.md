@@ -5,7 +5,7 @@ Galaxy Library with RTOS elements for Energia MT
 
 ### Content
 
-The Galaxia Library encapsulate RTOS elements as objects for an easier use. 
+The Galaxia Library encapsulates RTOS elements as objects for an easier use. 
 
 It runs on the boards supported by Energia MT: LaunchPad MSP432, LaunchPad CC3200 and RedBearLab CC3200-based boards. 
 
