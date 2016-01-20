@@ -32,3 +32,7 @@ Make sure to select the variant of the board with `EMT`.
 ### Installation
 
 Place the Galaxia folder on the `Libraries` folder of the sketchbook.
+
+### Licence
+
+Creative Commons [Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
