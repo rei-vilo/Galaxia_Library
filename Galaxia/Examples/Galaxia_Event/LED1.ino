@@ -1,7 +1,7 @@
 ///
 /// @file		LED1.ino
-/// @brief		Task for Energia MT
-/// @details	<#details#>
+/// @brief		Events for Energia MT
+/// @details	Example of Events for Hackster.io
 /// @n
 /// @n @b		Project EMT-event
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
@@ -10,30 +10,19 @@
 /// @author		http://embeddedcomputing.weebly.com
 ///
 /// @date		05/06/2015 21:20
-/// @version	<#version#>
+/// @version	101
 ///
 /// @copyright	(c) Rei Vilo, 2015
-/// @copyright	<#license#>
+/// @copyright	CC = BY SA NC
 ///
 /// @see		ReadMe.txt for references
 ///
 
 
 
-// Core library for code-sense - IDE-based
-#if defined(EMBEDXCODE)
-#if defined(ENERGIA) && defined(__MSP432P401R__) // LaunchPad MSP432 on Energia MT only
+// Include core, application, user and local libraries
 #include "Energia.h"
-#else
-#error LaunchPad MSP432 on Energia MT only
-#endif
-#endif // end IDE
-
-// Include application, user and local libraries
 #include "rtosGlobals.h"
-
-
-// Prototypes
 
 
 // Define variables and constants
@@ -50,9 +39,17 @@ void LED1_setup()
 // Loop
 void LED1_loop()
 {
-    myEvent1.waitFor(Event_Id_01);
+    uint32_t events = myEvent1.waitFor(Event_Id_01);
     value3 = 1 - value3;
     digitalWrite(RED_LED, value3);
-    Serial.print("R");
+
+    mySemaphore.waitFor();
+    Serial.print(millis(), DEC);
+    Serial.print("\t: myEvent1 *   (");
+    Serial.print(bin2String(events));
+    Serial.print(") red   ");
+    Serial.println(value3 ? "ON" : "OFF");
+    mySemaphore.post();
+
 }
 

@@ -1,7 +1,7 @@
 ///
 /// @file		Event2.ino
-/// @brief		Task for Energia MT
-/// @details	<#details#>
+/// @brief		Events for Energia MT
+/// @details	Example of Events for Hackster.io
 /// @n
 /// @n @b		Project EMT-event
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
@@ -10,33 +10,19 @@
 /// @author		http://embeddedcomputing.weebly.com
 ///
 /// @date		05/06/2015 21:07
-/// @version	<#version#>
+/// @version	101
 ///
 /// @copyright	(c) Rei Vilo, 2015
-/// @copyright	<#license#>
+/// @copyright	CC = BY SA NC
 ///
 /// @see		ReadMe.txt for references
 ///
 
 
 
-// Core library for code-sense - IDE-based
-#if defined(EMBEDXCODE)
-#if defined(ENERGIA) && defined(__MSP432P401R__) // LaunchPad MSP432 on Energia MT only
+// Include core, application, user and local libraries
 #include "Energia.h"
-#else
-#error LaunchPad MSP432 on Energia MT only
-#endif
-#endif // end IDE
-
-// Include application, user and local libraries
 #include "rtosGlobals.h"
-
-// Prototypes
-
-
-// Define variables and constants
-
 
 // Setup
 void Event2_setup()
@@ -50,7 +36,14 @@ void Event2_setup()
 void Event2_loop()
 {
     myEvent2.send(Event_Id_02);
-    Serial.print("2");
-    delay(1000);
+    
+    mySemaphore.waitFor();
+    Serial.print(millis(), DEC);
+    Serial.print("\t: myEvent2  2  (");
+    Serial.print(bin2String(Event_Id_02));
+    Serial.println(")");
+    mySemaphore.post();
+    
+    delay(5000);
 }
 
