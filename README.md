@@ -13,16 +13,23 @@ Make sure to select the variant of the board with `EMT`.
 
 * Threads elements
 	* HWI
-	* SWI
-	* SWI with trigger (SWItrigger)
+	* SWI (1)
+	* SWI with trigger (SWItrigger) (1)
 	* Task
 
 * Synchronisation elements
 	* Event
 	* Semaphore
-	* Mailbox
-	* Timer
-	* Clock
+	* Mailbox (2)
+	* Timer (3)
+	* Clock 
+	
+Notes
+
+1.	SWI has been removed from RTOS for Energia MT 0101E0017
+2.	Mailbox supersedes Queue
+3. 	Clock recommended over Timer
+ 
 
 ### Reference 
 
