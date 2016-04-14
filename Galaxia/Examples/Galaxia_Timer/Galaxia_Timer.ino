@@ -1,7 +1,7 @@
 ///
-/// @mainpage	EMT-TimerLibrary
+/// @mainpage	Galaxia Timer Library
 ///
-/// @details	Timer Library for Energia MT
+/// @details	Galaxia Timer example for Energia MT
 /// @n
 /// @n
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
@@ -19,10 +19,9 @@
 
 
 ///
-/// @file		EMT_TimerLibrary.ino
+/// @file		Galaxia_Timer.ino
 /// @brief		Main sketch
 ///
-/// @details	<#details#>
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
 ///
 /// @author		Rei Vilo

@@ -62,7 +62,8 @@ public:
     ///     0b=1100 = Event_Id_03 + Event_Id_02
     /// @endcode
     ///
-    uint32_t waitFor(xdc_UInt andMask = Event_Id_00, xdc_UInt orMask  = Event_Id_NONE);
+    uint32_t waitFor(xdc_UInt andMask = Event_Id_00,
+                     xdc_UInt orMask  = Event_Id_NONE);
 };
 
 #endif

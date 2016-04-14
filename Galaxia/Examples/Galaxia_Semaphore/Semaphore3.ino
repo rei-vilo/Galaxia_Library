@@ -1,7 +1,6 @@
 ///
 /// @file		Event2.ino
 /// @brief		Task for Energia MT
-/// @details	<#details#>
 /// @n
 /// @n @b		Project EMT-event
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
@@ -10,10 +9,10 @@
 /// @author		http://embeddedcomputing.weebly.com
 ///
 /// @date		05/06/2015 21:07
-/// @version	<#version#>
+/// @version	102
 ///
 /// @copyright	(c) Rei Vilo, 2015
-/// @copyright	<#license#>
+/// @copyright	CC = BY SA NC
 ///
 /// @see		ReadMe.txt for references
 ///

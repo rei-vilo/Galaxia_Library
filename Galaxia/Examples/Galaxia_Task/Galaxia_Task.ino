@@ -1,7 +1,7 @@
 ///
-/// @mainpage	EMT-Task
+/// @mainpage	Galaxia Task Library
 ///
-/// @details	Task Library for Energia MT
+/// @details	Galaxia Task example for Energia MT
 /// @n
 /// @n
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
@@ -9,7 +9,7 @@
 /// @author		Rei Vilo
 /// @author		http://embeddedcomputing.weebly.com
 /// @date		Jun 23, 2015 10:32
-/// @version	<#version#>
+/// @version	102
 ///
 /// @copyright	(c) Rei Vilo, 2015
 /// @copyright	CC = BY SA NC
@@ -19,18 +19,18 @@
 
 
 ///
-/// @file		EMT_Task.ino
+/// @file		Galaxia_Task.ino
 /// @brief		Main sketch
 ///
-/// @details	<#details#>
+/// @details	Task example with Galaxia library for Energia MT
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
 ///
 /// @author		Rei Vilo
 /// @author		http://embeddedcomputing.weebly.com
 /// @date		Jun 23, 2015 10:32
-/// @version	<#version#>
+/// @version	201
 ///
-/// @copyright	(c) Rei Vilo, 2015
+/// @copyright	(c) Rei Vilo, 2015-2016
 /// @copyright	CC = BY SA NC
 ///
 /// @see		ReadMe.txt for references
@@ -46,7 +46,6 @@
 #endif // end IDE
 
 // Include application, user and local libraries
-#include "rtosGlobals.h"
 
 
 // Prototypes

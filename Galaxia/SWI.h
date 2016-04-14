@@ -3,7 +3,7 @@
 /// @brief		RTOS SWI, part of the Galaxia Library Suite
 /// @details	RTOS SWI as C++ object for Energia MT
 /// @n
-/// @n @b		Project EMT-SWI
+/// @n @b		Project Galaxia library for Energia MT
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
 ///
 /// @author		Rei Vilo
@@ -12,7 +12,7 @@
 /// @date		Jun 08, 2015 09:53
 /// @version	104
 ///
-/// @copyright	(c) Rei Vilo, 2015
+/// @copyright	(c) Rei Vilo, 2015-2016
 /// @copyright	CC = BY SA NC
 ///
 /// @see		ReadMe.txt for references and example
@@ -48,6 +48,7 @@ void restoreSWI();
 /// @brief      RTOS SWI as object
 /// @details    The RTOS SWI is encapsulated as a C++ object for easier use
 /// @note       For w SWI with trigger, see the SWItrigger library.
+/// @deprecated SWI is no longer inlcuded in RTOS for Energia 0101E0017
 ///
 class SWI
 {

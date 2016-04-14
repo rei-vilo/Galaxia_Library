@@ -3,7 +3,7 @@
 /// @brief		RTOS Clock, part of the Galaxia Library Suite
 /// @details	RTOS Clock as C++ object for Energia MT
 /// @n	
-/// @n @b		Project EMT-ClockLibrary
+/// @n @b		Project Galaxia library for Energia MT
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
 /// 
 /// @author		Rei Vilo
@@ -12,7 +12,7 @@
 /// @date		Rei Vilo, Jun 17, 2015 09:59
 /// @version	101
 /// 
-/// @copyright	(c) Rei Vilo, 2015
+/// @copyright	(c) Rei Vilo, 2015-2016
 /// @copyright	CC = BY SA NC
 ///
 /// @see		ReadMe.txt for references
@@ -45,7 +45,12 @@ public:
     /// @brief      Define the Clock
     ///
     Clock();
-    
+
+    ///
+    /// @brief      Delete the Clock
+    ///
+    ~Clock();
+
     ///
     /// @brief      Create the Clock
     /// @param      ClockFunction function to be called

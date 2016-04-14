@@ -2,13 +2,12 @@
 /// @file		rtosGlobals.h
 /// @brief		Global variables for Energia MT project
 ///
-/// @details	<#details#>
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
 ///
 /// @author		Rei Vilo
 /// @author		http://embeddedcomputing.weebly.com
 /// @date		20/06/2015 17:06
-/// @version	<#version#>
+/// @version	102
 ///
 /// @copyright	(c) Rei Vilo, 2015
 /// @copyright	CC = BY SA NC

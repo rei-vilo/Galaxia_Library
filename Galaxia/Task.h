@@ -3,7 +3,7 @@
 /// @brief		RTOS Task, part of the Galaxia Library Suite
 /// @details	RTOS Task as C++ object for Energia MT
 /// @n
-/// @n @b		Project EMT-Task
+/// @n @b		Project Galaxia library for Energia MT
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
 ///
 /// @author		Rei Vilo
@@ -12,7 +12,7 @@
 /// @date		Jun 23, 2015 09:53
 /// @version	101
 ///
-/// @copyright	(c) Rei Vilo, 2015
+/// @copyright	(c) Rei Vilo, 2015-2016
 /// @copyright	CC = BY SA NC
 ///
 /// @see		ReadMe.txt for references and example

@@ -3,7 +3,16 @@
 // Code file
 // ----------------------------------
 //
-// Project EventLibrary for Energia MT 0101E0016
+// Project      Galaxia library for Energia MT
+//
+//
+// Created by 	Rei Vilo, Jun 08, 2015 09:53
+// 				http://embeddedcomputing.weebly.com
+//
+// Copyright 	(c) Rei Vilo, 2015-2016
+// Licence		CC = BY SA NC
+//
+// See 			Event.h and ReadMe.txt for references
 //
 
 #include "Event.h"

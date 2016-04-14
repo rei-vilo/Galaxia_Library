@@ -1,7 +1,7 @@
 ///
-/// @mainpage	multiBlink_with_Clock
+/// @mainpage	multiBlink with Galaxia Clock
 ///
-/// @details	Clock Library for Energia MT
+/// @details	Galaxia Clock example for Energia MT
 /// @n
 /// @n
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
@@ -9,7 +9,7 @@
 /// @author		Rei Vilo
 /// @author		http://embeddedcomputing.weebly.com
 /// @date		18/06/2015 16:05
-/// @version	<#version#>
+/// @version	102
 ///
 /// @copyright	(c) Rei Vilo, 2015
 /// @copyright	CC = BY SA NC
@@ -22,13 +22,12 @@
 /// @file		multiBlink_with_Clock.ino
 /// @brief		Main sketch
 ///
-/// @details	<#details#>
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
 ///
 /// @author		Rei Vilo
 /// @author		http://embeddedcomputing.weebly.com
 /// @date		18/06/2015 16:05
-/// @version	<#version#>
+/// @version	102
 ///
 /// @copyright	(c) Rei Vilo, 2015
 /// @copyright	CC = BY SA NC

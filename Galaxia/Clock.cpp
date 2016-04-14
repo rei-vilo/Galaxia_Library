@@ -5,12 +5,12 @@
 // Developed with embedXcode+ 
 // http://embedXcode.weebly.com
 //
-// Project 		EMT-ClockLibrary
+// Project      Galaxia library for Energia MT
 //
 // Created by 	Rei Vilo, Jun 17, 2015 09:59
 // 				http://embeddedcomputing.weebly.com
 //
-// Copyright 	(c) Rei Vilo, 2015
+// Copyright 	(c) Rei Vilo, 2015-2016
 // Licence		CC = BY SA NC
 //
 // See 			Clock.h and ReadMe.txt for references
@@ -22,6 +22,11 @@
 
 // Code
 Clock::Clock()
+{
+    ;
+}
+
+Clock::~Clock()
 {
     ;
 }

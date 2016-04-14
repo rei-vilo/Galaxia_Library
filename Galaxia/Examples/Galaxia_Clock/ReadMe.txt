@@ -7,7 +7,7 @@
 //  Project 	EMT-ClockLibrary
 //  Created by 	Rei Vilo on 18/06/2015
 //  Copyright 	© 2015 http://embeddedcomputing.weebly.com
-//  License	<#license#>
+//  License	CC = BY SA NC
 //
 
 * Parameters

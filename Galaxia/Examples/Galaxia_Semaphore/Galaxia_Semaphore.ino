@@ -1,8 +1,39 @@
 ///
-/// @file		EMT_event.ino
+/// @mainpage	Galaxia Semaphore Library
+///
+/// @details	Galaxia Semaphore example for Energia MT
+/// @n
+/// @n
+/// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
+///
+/// @author		Rei Vilo
+/// @author		http://embeddedcomputing.weebly.com
+/// @date		20/06/2015 17:06
+/// @version	102
+///
+/// @copyright	(c) Rei Vilo, 2015
+/// @copyright	CC = BY SA NC
+///
+/// @see		ReadMe.txt for references
+///
+
+
+///
+/// @file		Galaxia_Semaphore.ino
 /// @brief		Main sketch
 ///
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
+///
+/// @author		Rei Vilo
+/// @author		http://embeddedcomputing.weebly.com
+/// @date		20/06/2015 17:06
+/// @version	102
+///
+/// @copyright	(c) Rei Vilo, 2015
+/// @copyright	CC = BY SA NC
+///
+/// @see		ReadMe.txt for references
+/// @n
 ///
 
 // Core library for code-sense - IDE-based

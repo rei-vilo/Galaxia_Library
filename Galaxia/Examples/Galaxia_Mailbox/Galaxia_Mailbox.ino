@@ -1,7 +1,7 @@
 ///
-/// @mainpage	EMT-mailbox-template
+/// @mainpage	Galaxia Mailbox Library
 ///
-/// @details	Mailbox library for Energia MT
+/// @details	Galaxia Mailbox example for Energia MT
 /// @n
 /// @n
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
@@ -19,7 +19,7 @@
 
 
 ///
-/// @file		EMT_mailbox_template.ino
+/// @file		Galaxia_Mailbox.ino
 /// @brief		Main sketch
 ///
 /// @details	RTOS mailbox as an object

@@ -1,7 +1,6 @@
 ///
 /// @file		MailboxClient.ino
 /// @brief		Task for Energia MT
-/// @details	<#details#>
 /// @n
 /// @n @b		Project EMT-mailbox
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)

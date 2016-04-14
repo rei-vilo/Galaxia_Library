@@ -1,7 +1,7 @@
 ///
-/// @mainpage	Galaxia_Event
+/// @mainpage	Galaxia Event Library
 ///
-/// @details	Example of Events for Hackster.io
+/// @details	Galaxia Event example for Energia MT
 /// @n
 /// @n
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)

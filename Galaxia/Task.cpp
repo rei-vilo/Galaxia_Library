@@ -5,12 +5,12 @@
 // Developed with embedXcode+
 // http://embedXcode.weebly.com
 //
-// Project 		EMT-Task
+// Project      Galaxia library for Energia MT
 //
 // Created by 	Rei Vilo, Jun 23, 2015 09:53
 // 				http://embeddedcomputing.weebly.com
 //
-// Copyright 	(c) Rei Vilo, 2015
+// Copyright 	(c) Rei Vilo, 2015-2016
 // Licence		CC = BY SA NC
 //
 // See 			Task.h and ReadMe.txt for references

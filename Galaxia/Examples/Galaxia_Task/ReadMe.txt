@@ -1,13 +1,13 @@
 
-  EMT-Task
+  Galaxia_Task
   Project
   ----------------------------------
   Developed with embedXcode
 
-  Project EMT-Task
-  Created by Rei Vilo on Jun 23, 2015
-  Copyright © 2015 http://embeddedcomputing.weebly.com
-  License CC = BY SA NC
+  Project Galaxia_Task
+  Created by ReiVilo on 14/04/2016
+  Copyright © 2015-2016 Rei Vilo
+  Licence CC = BY SA NC
 
 
 
@@ -20,7 +20,7 @@
   embedXcode+
   ----------------------------------
   Embedded Computing on Xcode
-  Copyright © Rei VILO, 2010-2015
+  Copyright © Rei VILO, 2010-2016
   All rights reserved
   http://embedXcode.weebly.com
 

@@ -1,7 +1,7 @@
 ///
-/// @mainpage	EMT-ClockLibrary
+/// @mainpage	Galaxia Clock Library
 ///
-/// @details	Clock Library for Energia MT
+/// @details	Galaxia Clock example for Energia MT
 /// @n
 /// @n
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
@@ -19,7 +19,7 @@
 
 
 ///
-/// @file		EMT_ClockLibrary.ino
+/// @file		Galaxia_Clock.ino
 /// @brief		Main sketch
 ///
 /// @details	Clock Library for Energia MT
