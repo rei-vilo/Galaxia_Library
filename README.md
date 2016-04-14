@@ -9,6 +9,12 @@ The Galaxia Library encapsulates RTOS elements as objects for an easier use.
 
 It runs on the boards supported by Energia MT: LaunchPad MSP432, LaunchPad CC3200 and RedBearLab CC3200-based boards. 
 
+The library comes with an umbrella header `Galaxia.h` for an easier `#include`.
+
+> `#include "Galaxia.h"`
+
+Because SWI has been removed from RTOS for Energia MT 0101E0017, **SWI** And **SWITrigger** are no longer operational.
+
 Make sure to select the variant of the board with `EMT`.
 
 * Threads elements
