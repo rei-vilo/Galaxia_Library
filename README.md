@@ -17,6 +17,8 @@ Because SWI has been removed from RTOS for Energia MT 0101E0017, **SWI** And **S
 
 Make sure to select the variant of the board with `EMT`.
 
+### Content 
+
 * Threads elements
 	* HWI
 	* SWI (1)
@@ -35,16 +37,28 @@ Notes
 1.	SWI has been removed from RTOS for Energia MT 0101E0017
 2.	Mailbox supersedes Queue
 3. 	Clock recommended over Timer
- 
+  
+### Tutorials
+
+General documentation is available at [Exploring RTOS with Galaxia on Energia MT](http://embeddedcomputing.weebly.com/exploring-rtos-with-galaxia.html).
+
+I've posted four tutorials on Hacskter.io:
+
+* [Multi-Tasking with Energia MT with Galaxia Library](https://www.hackster.io/rei-vilo/multi-tasking-with-energia-mt-and-galaxia-library-20bd64?ref=user&amp;ref_id=55319&amp;offset=2)
+* [Manage Single Resource with Energia MT and Galaxia](https://www.hackster.io/rei-vilo/manage-single-resource-with-energia-mt-and-galaxia-cadb26?ref=user&amp;ref_id=55319&amp;offset=1)
+* [Send Data Across Tasks with Energia and Galaxia](https://www.hackster.io/rei-vilo/send-data-across-tasks-with-energia-and-galaxia-8be05c?ref=user&amp;ref_id=55319&amp;offset=0)
+* [Events with Energia MT and Galaxia Library](https://www.hackster.io/rei-vilo/events-with-energia-mt-and-galaxia-library-741d9b?ref=user&amp;ref_id=55319&amp;offset=0)
+
+Feel free to click on the **Respect** button!
+
+### Installation
+
+Place the Galaxia folder on the `Libraries` folder of the sketchbook.
 
 ### Reference 
 
 * [Exploring RTOS with Galaxia on Energia MT](http://embeddedcomputing.weebly.com/exploring-rtos-with-galaxia.html)
 * [TI-RTOS: Real-Time Operating System (RTOS)](http://www.ti.com/tool/ti-rtos)
-
-### Installation
-
-Place the Galaxia folder on the `Libraries` folder of the sketchbook.
 
 ### Licence
 
