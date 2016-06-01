@@ -1,0 +1,22 @@
+{
+    "name": "Galaxia Library",
+    "description": "RTOS elements for Energia MT",
+    "keywords": "RTOS, Energia",
+    "authors":
+    {
+        "name":  "Rei Vilo",
+        "url":   "https://github.com/rei-vilo",
+        "maintainer": true
+    },
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/rei-vilo/Galaxia_Library.git"
+    },
+    "url": "http://embeddedcomputing.weebly.com/exploring-rtos-with-galaxia.html",
+    "frameworks": "energia",
+    "platforms": ["cc3200emt","msp432"]
+     ]
+    "examples": "Examples/*/*.ino"
+    
+}
