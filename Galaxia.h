@@ -2,16 +2,16 @@
 /// @file		Galaxia.h
 /// @brief		RTOS Clock, part of the Galaxia Library Suite
 /// @details	Galaxia library Simple header for Energia MT
-/// @n	
+/// @n
 /// @n @b		Project Galaxia library for Energia MT
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
-/// 
+///
 /// @author		Rei Vilo
 /// @author		http://embeddedcomputing.weebly.com
 ///
 /// @date		Rei Vilo, Jun 17, 2015 09:59
 /// @version	201
-/// 
+///
 /// @copyright	(c) Rei Vilo, 2015-2016
 /// @copyright	CC = BY SA NC
 ///

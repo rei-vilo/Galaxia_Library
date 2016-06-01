@@ -26,12 +26,12 @@ void Event::begin()
 {
     Error_Block eb;
     Error_init(&eb);
-    
+
     Event_Params params;
     Event_Params_init(&params);
-    
+
     EventHandle = Event_create(&params, &eb);
-    
+
     if (EventHandle == NULL)
     {
         System_abort("Event create failed");

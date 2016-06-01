@@ -31,17 +31,17 @@
 #include <ti/sysbios/BIOS.h>
 
 /*
-///
-/// @brief		Available count
-/// @return		number of available count
-/// @bug        Disabling SWItrigger disables all triggers, included those used by Energia MT
-///
-void disableSWItrigger();
+    ///
+    /// @brief		Available count
+    /// @return		number of available count
+    /// @bug        Disabling SWItrigger disables all triggers, included those used by Energia MT
+    ///
+    void disableSWItrigger();
 
-///
-/// @brief      Wait for the SWItrigger
-///
-void restoreSWItrigger();
+    ///
+    /// @brief      Wait for the SWItrigger
+    ///
+    void restoreSWItrigger();
 */
 
 ///
@@ -49,48 +49,47 @@ void restoreSWItrigger();
 /// @details    The RTOS SWI with trigger is encapsulated as a C++ object for easier use
 /// @deprecated SWI and thus SWItrigger are no longer inlcuded in RTOS for Energia 0101E0017
 ///
-class SWItrigger
-{
-private:
-    Swi_Handle SWItriggerHandle;
-    
-public:
-    ///
-    /// @brief      Define the SWItrigger
-    ///
-    SWItrigger();
-    
-    ///
-    /// @brief      Create the SWItrigger
-    /// @param      functionSWItrigger function to be called
-    /// @note       For serial port, take 1.
-    /// @note       The function must be void functionSWItrigger()
-    /// @code   void functionSWItrigger()
-    ///         {
-    ///             digitalWrite(RED_LED, HIGH);
-    ///         }
-    /// @endcode
-    /// @bug        functionSWItrigger(uint8_t) with uint8_t = Swi_getTrigger() doesn't work.
-    /// @todo       The idea is to have the same function as for Wire library with
-    ///             Wire.onReceive(void (*ReceiveEvent)(int)) and void ReceiveEvent(int howMany)
-    ///
-    // void begin(uint8_t trigger, void (*functionSWItrigger)(uint8_t));
-    void begin(uint8_t trigger, void (*functionSWItrigger)());
-    
-    ///
-    /// @brief      Post a SWItrigger
-    ///
-    void post();
-    
-    ///
-    /// @brief	Increment count and post
-    ///
-    void inc();
+class SWItrigger {
+    private:
+        Swi_Handle SWItriggerHandle;
 
-    ///
-    /// @brief	Decrement count and post if count = 0
-    ///
-    void dec();
+    public:
+        ///
+        /// @brief      Define the SWItrigger
+        ///
+        SWItrigger();
+
+        ///
+        /// @brief      Create the SWItrigger
+        /// @param      functionSWItrigger function to be called
+        /// @note       For serial port, take 1.
+        /// @note       The function must be void functionSWItrigger()
+        /// @code   void functionSWItrigger()
+        ///         {
+        ///             digitalWrite(RED_LED, HIGH);
+        ///         }
+        /// @endcode
+        /// @bug        functionSWItrigger(uint8_t) with uint8_t = Swi_getTrigger() doesn't work.
+        /// @todo       The idea is to have the same function as for Wire library with
+        ///             Wire.onReceive(void (*ReceiveEvent)(int)) and void ReceiveEvent(int howMany)
+        ///
+        // void begin(uint8_t trigger, void (*functionSWItrigger)(uint8_t));
+        void begin(uint8_t trigger, void (*functionSWItrigger)());
+
+        ///
+        /// @brief      Post a SWItrigger
+        ///
+        void post();
+
+        ///
+        /// @brief	Increment count and post
+        ///
+        void inc();
+
+        ///
+        /// @brief	Decrement count and post if count = 0
+        ///
+        void dec();
 
 };
 #endif

@@ -71,54 +71,54 @@ void timerFunction()
 }
 
 /*
- ///
- /// @brief	2nd timer
- /// @bug    Doesn't work. Only one timer allowed
- ///
- Timer myTimer2;
- 
- ///
- /// @brief	Function for 2nd timer
- /// @bug    Serial.print doesn't work
- ///
- void timerFunction2()
- {
- Serial.print("1 s\t");
- }
- */
+    ///
+    /// @brief	2nd timer
+    /// @bug    Doesn't work. Only one timer allowed
+    ///
+    Timer myTimer2;
+
+    ///
+    /// @brief	Function for 2nd timer
+    /// @bug    Serial.print doesn't work
+    ///
+    void timerFunction2()
+    {
+    Serial.print("1 s\t");
+    }
+*/
 
 // Add setup code
 void setup()
 {
     Serial.begin(115200);
     pinMode(myLED, OUTPUT);
-    
+
     Serial.print(Timer_getNumTimers(), DEC);
     Serial.println(" timers");
-    
+
     Serial.print("myTimer.begin... ");
     myTimer.begin(timerFunction, 500);
     Serial.println("done");
-    
-/*
-     Serial.print("myTimer2.begin... ");
-     myTimer2.begin(timerFunction2, 1000);
-     Serial.println("done");
- */
-    
+
+    /*
+         Serial.print("myTimer2.begin... ");
+         myTimer2.begin(timerFunction2, 1000);
+         Serial.println("done");
+    */
+
     Serial.print("myTimer.start... ");
     myTimer.start();
     Serial.println("done");
 
-/*
-     Serial.print("myTimer2.start... ");
-     myTimer2.start();
-     Serial.println("done");
- */
+    /*
+         Serial.print("myTimer2.start... ");
+         myTimer2.start();
+         Serial.println("done");
+    */
 }
 
 // Add loop code
-void loop() 
+void loop()
 {
-    
+
 }

@@ -23,18 +23,18 @@
 
 // Code
 /*
- UInt SWIKey;
- 
- void disableSWI()
- {
- SWIKey = Swi_disable();
- }
- 
- void restoreSWI()
- {
- Swi_restore(SWIKey);
- }
- */
+    UInt SWIKey;
+
+    void disableSWI()
+    {
+    SWIKey = Swi_disable();
+    }
+
+    void restoreSWI()
+    {
+    Swi_restore(SWIKey);
+    }
+*/
 
 SWI::SWI()
 {
@@ -45,10 +45,10 @@ void SWI::begin(void (*functionSWI)(void))
 {
     Error_Block eb;
     Error_init(&eb);
-    
+
     Swi_Params swiParams;
     Swi_Params_init(&swiParams);
-    
+
     SWIHandle = Swi_create((Swi_FuncPtr)functionSWI, &swiParams, &eb);
 }
 

@@ -39,9 +39,9 @@
 
 // Core library for code-sense - IDE-based
 #if defined(ENERGIA) // LaunchPad specific
-#   include "Energia.h"
+    #include "Energia.h"
 #else // error
-#   error Platform not defined
+    #   error Platform not defined
 #endif // end IDE
 
 // Include application, user and local libraries
@@ -64,11 +64,11 @@ void setup()
 void loop()
 {
     mySemaphore.waitFor();
-    
+
     Serial.print(millis(), DEC);
     Serial.print("\t1\t");
     Serial.println(chrono, DEC);
-    
+
     mySemaphore.post();
 }
 

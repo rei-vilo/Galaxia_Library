@@ -1,8 +1,8 @@
 //
-// Timer.cpp 
+// Timer.cpp
 // Library C++ code
 // ----------------------------------
-// Developed with embedXcode+ 
+// Developed with embedXcode+
 // http://embedXcode.weebly.com
 //
 // Project      Galaxia library for Energia MT
@@ -34,7 +34,7 @@ void Timer::begin(void (*timerFunction)(void), uint32_t timerPeriod_unit, uint32
     // xdc_UInt TimerId = 3; // OK=3, NOK=2,1,0 MSP432=4 timers, only timer 3 available
     // Timer_ANY to take any available timer
     xdc_UInt TimerId = Timer_ANY;
-    
+
     Timer_Params params;
     Timer_Params_init(&params);
     params.periodType = Timer_PeriodType_MICROSECS;

@@ -39,9 +39,9 @@
 
 // Core library for code-sense - IDE-based
 #if defined(ENERGIA) // LaunchPad specific
-#   include "Energia.h"
+    #include "Energia.h"
 #else // error
-#   error Platform not defined
+    #   error Platform not defined
 #endif // end IDE
 
 // Include application, user and local libraries
@@ -62,22 +62,22 @@ void setup()
     pinMode(PUSH1, INPUT_PULLUP);
 #endif
     /*
-     pinMode(PUSH2, INPUT_PULLUP);
-     pinMode(RED_LED, OUTPUT);
-     */
+        pinMode(PUSH2, INPUT_PULLUP);
+        pinMode(RED_LED, OUTPUT);
+    */
 }
 
 // Loop
 void loop()
 {
     mySemaphore.waitFor();
-    
+
     Serial.print(millis(), DEC);
     Serial.print("\t1\t");
     Serial.println(chrono, DEC);
-    
+
     mySemaphore.post();
-    
+
 #if (SOLUTION == 1)
     // Solution 1: polling
     if (!digitalRead(PUSH1))
@@ -86,20 +86,20 @@ void loop()
         mySWI.post();
     }
 #endif
-    
+
     /*
-     if (!digitalRead(PUSH2))
-     {
-     while (!digitalRead(PUSH2));
-     flag = !flag;
-     if (flag) disableSWI();
-     else restoreSWI();
-     Serial.println(flag, DEC);
-     digitalWrite(RED_LED, flag);
-     }
-     */
-    
-//    delay(10);
+        if (!digitalRead(PUSH2))
+        {
+        while (!digitalRead(PUSH2));
+        flag = !flag;
+        if (flag) disableSWI();
+        else restoreSWI();
+        Serial.println(flag, DEC);
+        digitalWrite(RED_LED, flag);
+        }
+    */
+
+    //    delay(10);
 }
 
 

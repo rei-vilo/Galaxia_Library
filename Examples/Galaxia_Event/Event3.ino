@@ -37,14 +37,14 @@ void Event3_setup()
 void Event3_loop()
 {
     myEvent2.send(Event_Id_03);
-    
+
     mySemaphore.waitFor();
     Serial.print(millis(), DEC);
     Serial.print("\t: myEvent2   3 (");
     Serial.print(bin2String(Event_Id_03));
     Serial.println(")");
     mySemaphore.post();
-    
+
     delay(3000);
 }
 

@@ -56,13 +56,13 @@ void setup()
 void loop()
 {
     myEvent1.send(Event_Id_01);
-    
+
     mySemaphore.waitFor();
     Serial.print(millis(), DEC);
     Serial.print("\t: myEvent1 1   (");
     Serial.print(bin2String(Event_Id_01));
     Serial.println(")");
     mySemaphore.post();
-    
+
     delay(2000);
 }

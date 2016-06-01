@@ -34,41 +34,40 @@
 /// @brief      RTOS Semaphore as object
 /// @details    The RTOS Semaphore is encapsulated as a C++ object for easier use
 ///
-class Semaphore
-{
-private:
-    Semaphore_Handle SemaphoreHandle;
-    static xdc_UInt SemaphoreId;
-    xdc_UInt Semaphore_Id_number;
-    
-public:
-    ///
-    /// @brief      Define the semaphore
-    ///
-    Semaphore();
-    
-    ///
-    /// @brief      Create the semaphore
-    /// @param      count usually number of ressources to synchronise, default = 1
-    /// @note       For serial port, take 1.
-    ///
-    void begin(uint8_t count = 1);
+class Semaphore {
+    private:
+        Semaphore_Handle SemaphoreHandle;
+        static xdc_UInt SemaphoreId;
+        xdc_UInt Semaphore_Id_number;
 
-    ///
-    /// @brief      Post a semaphore
-    ///
-    void post();
-    
-    ///
-    /// @brief		Available count
-    /// @return		number of available count
-    ///
-    uint16_t available();
-    
-    ///
-    /// @brief      Wait for the semaphore
-    ///
-    void waitFor();
+    public:
+        ///
+        /// @brief      Define the semaphore
+        ///
+        Semaphore();
+
+        ///
+        /// @brief      Create the semaphore
+        /// @param      count usually number of ressources to synchronise, default = 1
+        /// @note       For serial port, take 1.
+        ///
+        void begin(uint8_t count = 1);
+
+        ///
+        /// @brief      Post a semaphore
+        ///
+        void post();
+
+        ///
+        /// @brief		Available count
+        /// @return		number of available count
+        ///
+        uint16_t available();
+
+        ///
+        /// @brief      Wait for the semaphore
+        ///
+        void waitFor();
 };
 
 

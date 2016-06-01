@@ -41,10 +41,10 @@ void LED2_loop()
     //    uint32_t events = myEvent2.waitFor(Event_Id_02 + Event_Id_03, Event_Id_NONE);
     // OR
     uint32_t events = myEvent2.waitFor(Event_Id_NONE, Event_Id_02 + Event_Id_03);
-    
+
     value2 = 1 - value2;
     digitalWrite(GREEN_LED, value2);
-    
+
     mySemaphore.waitFor();
     Serial.print(millis(), DEC);
     Serial.print("\t: myEvent2  ** (");

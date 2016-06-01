@@ -1,8 +1,8 @@
 //
-// Semaphore.cpp 
+// Semaphore.cpp
 // Library C++ code
 // ----------------------------------
-// Developed with embedXcode+ 
+// Developed with embedXcode+
 // http://embedXcode.weebly.com
 //
 // Project      Galaxia library for Energia MT
@@ -33,7 +33,7 @@ void Semaphore::begin(uint8_t count)
 
     Semaphore_Params params;
     Semaphore_Params_init(&params);
-    
+
     SemaphoreHandle = Semaphore_create(count, &params, &eb);
 
     if (SemaphoreHandle == NULL)

@@ -1,8 +1,8 @@
 //
-// Clock.cpp 
+// Clock.cpp
 // Library C++ code
 // ----------------------------------
-// Developed with embedXcode+ 
+// Developed with embedXcode+
 // http://embedXcode.weebly.com
 //
 // Project      Galaxia library for Energia MT
@@ -35,7 +35,7 @@ void Clock::begin(void (*ClockFunction)(void), uint32_t ClockTimeOut_ms, uint32_
 {
     Error_Block eb;
     Error_init(&eb);
-        
+
     Clock_Params_init(&ClockParams);
     ClockParams.startFlag = false; // Requires Clock_start
 
@@ -44,7 +44,7 @@ void Clock::begin(void (*ClockFunction)(void), uint32_t ClockTimeOut_ms, uint32_
 
     // Surprisingly, period already defined in ms for ClockParams.period andClockTimeOut_ms
     ClockParams.period = ClockPeriod_ms;
-    ClockHandle = Clock_create( (Clock_FuncPtr)ClockFunction, ClockTimeOut_ms, &ClockParams, &eb); 
+    ClockHandle = Clock_create((Clock_FuncPtr)ClockFunction, ClockTimeOut_ms, &ClockParams, &eb);
 
     if (ClockHandle == NULL)
     {

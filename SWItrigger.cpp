@@ -23,18 +23,18 @@
 
 // Code
 /*
- UInt SWItriggerKey;
- 
- void disableSWItrigger()
- {
- SWItriggerKey = Swi_disable();
- }
- 
- void restoreSWItrigger()
- {
- Swi_restore(SWItriggerKey);
- }
- */
+    UInt SWItriggerKey;
+
+    void disableSWItrigger()
+    {
+    SWItriggerKey = Swi_disable();
+    }
+
+    void restoreSWItrigger()
+    {
+    Swi_restore(SWItriggerKey);
+    }
+*/
 
 SWItrigger::SWItrigger()
 {
@@ -46,12 +46,12 @@ void SWItrigger::begin(uint8_t trigger, void (*functionSWItrigger)())
 {
     Error_Block eb;
     Error_init(&eb);
-    
+
     Swi_Params swiParams;
     Swi_Params_init(&swiParams);
     swiParams.trigger = trigger;
-    
-//    SWItriggerHandle = Swi_create((Swi_FuncPtr)functionSWItrigger(Swi_getTrigger()), &swiParams, &eb);
+
+    //    SWItriggerHandle = Swi_create((Swi_FuncPtr)functionSWItrigger(Swi_getTrigger()), &swiParams, &eb);
     SWItriggerHandle = Swi_create((Swi_FuncPtr)functionSWItrigger, &swiParams, &eb);
 
     if (SWItriggerHandle == NULL)

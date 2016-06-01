@@ -61,16 +61,16 @@ void rtosSetup()
 {
     pinMode(RED_LED, OUTPUT);
     pinMode(BLUE_LED, OUTPUT);
-    
+
     Serial.begin(115200);
     mySemaphore.begin(1);
     mySWItrigger.begin(3, functionSWItrigger);
     myEvent.begin();
-    
+
     mySemaphore.waitFor();
     Serial.println("rtosSetup");
     mySemaphore.post();
-    
+
     // Solution 2: Energia interrupt
     pinMode(PUSH1, INPUT_PULLUP);
     attachInterrupt(PUSH1, functionPUSH1, FALLING);

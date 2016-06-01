@@ -61,7 +61,7 @@ myMessage_t message1;
 ////        digitalWrite(GREEN_LED, LOW);
 ////        delay(300);
 ////    }
-//    
+//
 //    Serial.begin(115200);
 //    Serial.println("begin");
 //
@@ -74,7 +74,7 @@ myMessage_t message1;
 // Add setup code
 void setup()
 {
-//    rtosSetup();
+    //    rtosSetup();
     Serial.begin(115200);
 
     Serial.print("?\tAction\tchrono");
@@ -85,7 +85,7 @@ void setup()
     Serial.print("available");
     Serial.print("\t:\t");
     Serial.println("result");
-    
+
     Serial.print("?\t\t");
     Serial.print("\t.chrono");
     Serial.print("\t");
@@ -94,7 +94,7 @@ void setup()
     Serial.print("");
     Serial.print("\t:\t");
     Serial.println("");
-    
+
     mySemaphore.begin(1);
     myMailbox.begin(NUMBER); // default = 16
 }
@@ -104,9 +104,9 @@ void loop()
 {
     message1.chrono = millis();
     strcpy(message1.buffer, "from 1");
-    
+
     bool result = myMailbox.post(message1, MODALITY); // default = BIOS_WAIT_FOREVER
-    
+
     mySemaphore.waitFor();
     Serial.print("1>\t");
     Serial.print(millis(), DEC);
@@ -119,7 +119,7 @@ void loop()
     Serial.print("\t:\t");
     Serial.println(result, DEC);
     mySemaphore.post();
-    
+
     delay(500);
 }
 

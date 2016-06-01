@@ -39,9 +39,9 @@
 
 // Core library for code-sense - IDE-based
 #if defined(ENERGIA) // LaunchPad specific
-#   include "Energia.h"
+    #include "Energia.h"
 #else // error
-#   error Platform not defined
+    #   error Platform not defined
 #endif // end IDE
 
 
@@ -54,7 +54,8 @@
 
 
 // Define variables and constants
-struct LED_t {
+struct LED_t
+{
     uint8_t status;
     uint8_t pin;
 };
@@ -93,10 +94,10 @@ Clock myClockB;
 void setup()
 {
     myClockR.begin(clockFunctionR, 1000, 100); // 1000 ms = 1 s
-    
+
     myClockG.begin(clockFunctionG, 1000, 333); // 1000 ms = 1 s
     myClockB.begin(clockFunctionB, 1000, 500); // 1000 ms = 1 s
-    
+
     myClockR.start();
     myClockG.start();
     myClockB.start();
@@ -106,5 +107,5 @@ void setup()
 // Loop
 void loop()
 {
-    
+
 }

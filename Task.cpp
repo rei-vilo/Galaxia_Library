@@ -23,18 +23,18 @@
 
 // Code
 /*
- UInt TaskKey;
- 
- void disableTask()
- {
- TaskKey = Task_disable();
- }
- 
- void restoreTask()
- {
- Task_restore(TaskKey);
- }
- */
+    UInt TaskKey;
+
+    void disableTask()
+    {
+    TaskKey = Task_disable();
+    }
+
+    void restoreTask()
+    {
+    Task_restore(TaskKey);
+    }
+*/
 
 Task::Task()
 {
@@ -45,13 +45,13 @@ void Task::begin(void (*functionTask)(void), int8_t priority)
 {
     Error_Block eb;
     Error_init(&eb);
-    
+
     Task_Params params;
     Task_Params_init(&params);
 
     params.stackSize = 0x800;
     params.priority = priority;
-    
+
     TaskHandle = Task_create((Task_FuncPtr)functionTask, &params, &eb);
     if (TaskHandle == NULL)
     {

@@ -46,7 +46,7 @@ Event myEvent;
 // SWI function
 void functionSWI()
 {
-//    Serial.println("\tSWI");
+    //    Serial.println("\tSWI");
     chrono = millis();
     myEvent.send();
 }
@@ -54,7 +54,7 @@ void functionSWI()
 // HWI function
 void functionHWI()
 {
-//    Serial.println("\tHWI");
+    //    Serial.println("\tHWI");
     mySWI.post();
 }
 
@@ -66,11 +66,11 @@ void rtosSetup()
     mySemaphore.begin(1);
     mySWI.begin(functionSWI);
     myEvent.begin();
-    
+
     mySemaphore.waitFor();
     Serial.println("rtosSetup");
     mySemaphore.post();
-    
+
     // Solution 3: HWI
     pinMode(PUSH1, INPUT_PULLUP);
     myHWI.begin(PUSH1, functionHWI, FALLING);

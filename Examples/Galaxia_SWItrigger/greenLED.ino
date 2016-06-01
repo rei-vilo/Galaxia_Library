@@ -21,11 +21,11 @@
 
 // Core library for code-sense - IDE-based
 #if defined(EMBEDXCODE)
-#if defined(ENERGIA) && defined(__MSP432P401R__) // LaunchPad MSP432 on Energia MT only
-#include "Energia.h"
-#else
-#error LaunchPad MSP432 on Energia MT only
-#endif
+    #if defined(ENERGIA) && defined(__MSP432P401R__) // LaunchPad MSP432 on Energia MT only
+        #include "Energia.h"
+    #else
+        #error LaunchPad MSP432 on Energia MT only
+    #endif
 #endif // end IDE
 
 // Include application, user and local libraries
@@ -39,14 +39,15 @@
 
 void blink(uint8_t pin, uint8_t times, uint16_t ms)
 {
-    for (uint8_t i=0; i<times; i++) {
+    for (uint8_t i = 0; i < times; i++)
+    {
         digitalWrite(pin, HIGH);
         // delay gives focus back to other tasks
         // delay(ms >> 1);
         // delayMicroseconds doesn't seem so
-        delayMicroseconds((ms >> 1)*1000);
+        delayMicroseconds((ms >> 1) * 1000);
         digitalWrite(pin, LOW);
-        delayMicroseconds((ms >> 1)*1000);
+        delayMicroseconds((ms >> 1) * 1000);
     }
 }
 
@@ -68,10 +69,10 @@ void greenLED_loop()
     digitalWrite(BLUE_LED, LOW);
 
     mySemaphore.waitFor();
-    
+
     Serial.print(millis(), DEC);
     Serial.println("\t4\t*");
-    
+
     mySemaphore.post();
 }
 

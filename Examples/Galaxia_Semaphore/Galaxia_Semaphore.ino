@@ -58,7 +58,7 @@ void setup()
     // Try with 3 to show the remaining count
     mySemaphore.begin(1);
 #endif
-    
+
     Serial.begin(115200);
 }
 
@@ -77,7 +77,7 @@ void loop()
     Serial.print("-");
 #endif
     Serial.println(")");
-    
+
 #if defined(optionSemaphore)
     mySemaphore.post();
 #endif

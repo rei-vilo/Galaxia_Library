@@ -58,7 +58,7 @@ void MailboxSender2_setup()
     //    Serial.begin(115200);
     //
     //    myMailbox.begin();
-    
+
     delay(100);
 }
 
@@ -67,9 +67,9 @@ void MailboxSender2_loop()
 {
     message2.chrono = millis();
     strcpy(message2.buffer, "from 2");
-    
+
     bool result = myMailbox.post(message2, MODALITY);
-    
+
     mySemaphore.waitFor();
     Serial.print("2>\t");
     Serial.print(millis(), DEC);
@@ -82,6 +82,6 @@ void MailboxSender2_loop()
     Serial.print("\t:\t");
     Serial.println(result, DEC);
     mySemaphore.post();
-        
+
     delay(200);
 }

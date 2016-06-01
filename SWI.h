@@ -31,17 +31,17 @@
 #include <ti/sysbios/BIOS.h>
 
 /*
-///
-/// @brief		Available count
-/// @return		number of available count
-/// @bug        Disabling SWI disables all SWIs, included those used by Energia MT
-///
-void disableSWI();
+    ///
+    /// @brief		Available count
+    /// @return		number of available count
+    /// @bug        Disabling SWI disables all SWIs, included those used by Energia MT
+    ///
+    void disableSWI();
 
-///
-/// @brief      Wait for the SWI
-///
-void restoreSWI();
+    ///
+    /// @brief      Wait for the SWI
+    ///
+    void restoreSWI();
 */
 
 ///
@@ -50,33 +50,32 @@ void restoreSWI();
 /// @note       For w SWI with trigger, see the SWItrigger library.
 /// @deprecated SWI is no longer inlcuded in RTOS for Energia 0101E0017
 ///
-class SWI
-{
-private:
-    Swi_Handle SWIHandle;
-    
-public:
-    ///
-    /// @brief      Define the SWI
-    ///
-    SWI();
-    
-    ///
-    /// @brief      Create the SWI
-    /// @param      functionSWI function to be called
-    /// @note       For serial port, take 1.
-    /// @note       The function must be void functionSWI()
-    /// @code   void functionSWI()
-    ///         {
-    ///             digitalWrite(RED_LED, HIGH);
-    ///         }
-    /// @endcode
-    ///
-    void begin(void (*functionSWI)(void));
-    
-    ///
-    /// @brief      Post a SWI
-    ///
-    void post();
+class SWI {
+    private:
+        Swi_Handle SWIHandle;
+
+    public:
+        ///
+        /// @brief      Define the SWI
+        ///
+        SWI();
+
+        ///
+        /// @brief      Create the SWI
+        /// @param      functionSWI function to be called
+        /// @note       For serial port, take 1.
+        /// @note       The function must be void functionSWI()
+        /// @code   void functionSWI()
+        ///         {
+        ///             digitalWrite(RED_LED, HIGH);
+        ///         }
+        /// @endcode
+        ///
+        void begin(void (*functionSWI)(void));
+
+        ///
+        /// @brief      Post a SWI
+        ///
+        void post();
 };
 #endif

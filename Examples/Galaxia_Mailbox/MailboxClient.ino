@@ -21,11 +21,11 @@
 
 // Core library for code-sense - IDE-based
 #if defined(EMBEDXCODE)
-#if defined(ENERGIA) && defined(__MSP432P401R__) // LaunchPad MSP432 on Energia MT only
-#include "Energia.h"
-#else
-#error LaunchPad MSP432 on Energia MT only
-#endif
+    #if defined(ENERGIA) && defined(__MSP432P401R__) // LaunchPad MSP432 on Energia MT only
+        #include "Energia.h"
+    #else
+        #error LaunchPad MSP432 on Energia MT only
+    #endif
 #endif // end IDE
 
 // Include application, user and local libraries
@@ -46,7 +46,7 @@ void MailboxClient_setup()
     //    Serial.begin(115200);
     //
     //    myMailbox.begin();
-    
+
     delay(100);
 }
 
@@ -54,7 +54,7 @@ void MailboxClient_setup()
 void MailboxClient_loop()
 {
     myMailbox.waitFor(messageB);
-    
+
     mySemaphore.waitFor();
     Serial.print("*<\t");
     Serial.print(millis(), DEC);
@@ -66,7 +66,7 @@ void MailboxClient_loop()
     Serial.print(myMailbox.available());
     Serial.println("\t:\t");
     mySemaphore.post();
- 
+
     delay(300);
 }
 

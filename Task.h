@@ -31,17 +31,17 @@
 #include <ti/sysbios/BIOS.h>
 
 /*
-///
-/// @brief		Available count
-/// @return		number of available count
-/// @bug        Disabling Task disables all Tasks, included those used by Energia MT
-///
-void disableTask();
+    ///
+    /// @brief		Available count
+    /// @return		number of available count
+    /// @bug        Disabling Task disables all Tasks, included those used by Energia MT
+    ///
+    void disableTask();
 
-///
-/// @brief      Wait for the Task
-///
-void restoreTask();
+    ///
+    /// @brief      Wait for the Task
+    ///
+    void restoreTask();
 */
 
 ///
@@ -51,33 +51,32 @@ void restoreTask();
 /// @note       This implementation of Task differs from Energia MT.
 /// @n          Each sketch (.ino file) includes setup() and loop() for Energia MT.
 ///
-class Task
-{
-private:
-    Task_Handle TaskHandle;
-    
-public:
-    ///
-    /// @brief      Define the Task
-    ///
-    Task();
-    
-    ///
-    /// @brief      Create the Task
-    /// @param      functionTask function to be called
-    /// @param      priority 0 .. Task_numPriorities - 1
-    /// @note       The function must be void functionTask()
-    /// @code   void functionTask()
-    ///         {
-    ///             digitalWrite(RED_LED, HIGH);
-    ///         }
-    /// @endcode
-    ///
-    void begin(void (*functionTask)(void), int8_t priority);
-    
-//    ///
-//    /// @brief      Post a Task
-//    ///
-//    void post();
+class Task {
+    private:
+        Task_Handle TaskHandle;
+
+    public:
+        ///
+        /// @brief      Define the Task
+        ///
+        Task();
+
+        ///
+        /// @brief      Create the Task
+        /// @param      functionTask function to be called
+        /// @param      priority 0 .. Task_numPriorities - 1
+        /// @note       The function must be void functionTask()
+        /// @code   void functionTask()
+        ///         {
+        ///             digitalWrite(RED_LED, HIGH);
+        ///         }
+        /// @endcode
+        ///
+        void begin(void (*functionTask)(void), int8_t priority);
+
+        //    ///
+        //    /// @brief      Post a Task
+        //    ///
+        //    void post();
 };
 #endif

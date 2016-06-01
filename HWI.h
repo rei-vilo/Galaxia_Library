@@ -32,17 +32,17 @@
 #include <ti/drivers/GPIO.h>
 
 /*
-///
-/// @brief		Available count
-/// @return		number of available count
-/// @bug        Disabling HWI disables all HWIs, included those used by Energia MT
-///
-void disableHWI();
+    ///
+    /// @brief		Available count
+    /// @return		number of available count
+    /// @bug        Disabling HWI disables all HWIs, included those used by Energia MT
+    ///
+    void disableHWI();
 
-///
-/// @brief      Wait for the HWI
-///
-void restoreHWI();
+    ///
+    /// @brief      Wait for the HWI
+    ///
+    void restoreHWI();
 */
 
 ///
@@ -50,38 +50,37 @@ void restoreHWI();
 /// @details    The RTOS HWI is encapsulated as a C++ object for easier use
 /// @bug        Reuse of msp432/cores/msp432/WInterrupts.c based on ti/drivers/GPIO.h. HWI impementation?
 ///
-class HWI
-{
-private:
-    Hwi_Handle HWIHandle;
-    uint8_t HWIpin;
-    
-public:
-    ///
-    /// @brief      Define the HWI
-    ///
-    HWI();
-    
-    ///
-    /// @brief      Create the HWI
-    /// @param      pinNumber function to be called
-    /// @param      functionHWI function to be called
-    /// @param      mode LOW, CHANGE, FALLING, RISING
-    /// @note       Same as attachInterrupt()
-    /// @note       The function must be void functionHWI()
-    /// @code   void functionHWI()
-    ///         {
-    ///             digitalWrite(RED_LED, HIGH);
-    ///         }
-    /// @endcode
-    ///
-    void begin(uint8_t pinNumber, void (*functionHWI)(void), int mode);
+class HWI {
+    private:
+        Hwi_Handle HWIHandle;
+        uint8_t HWIpin;
 
-    
-    ///
-    /// @brief      Clear the interrupt
-    /// @note       Same as detachInterrupt()
-    ///
-    void clearInterrupt();
+    public:
+        ///
+        /// @brief      Define the HWI
+        ///
+        HWI();
+
+        ///
+        /// @brief      Create the HWI
+        /// @param      pinNumber function to be called
+        /// @param      functionHWI function to be called
+        /// @param      mode LOW, CHANGE, FALLING, RISING
+        /// @note       Same as attachInterrupt()
+        /// @note       The function must be void functionHWI()
+        /// @code   void functionHWI()
+        ///         {
+        ///             digitalWrite(RED_LED, HIGH);
+        ///         }
+        /// @endcode
+        ///
+        void begin(uint8_t pinNumber, void (*functionHWI)(void), int mode);
+
+
+        ///
+        /// @brief      Clear the interrupt
+        /// @note       Same as detachInterrupt()
+        ///
+        void clearInterrupt();
 };
 #endif

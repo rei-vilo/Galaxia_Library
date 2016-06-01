@@ -21,11 +21,11 @@
 
 // Core library for code-sense - IDE-based
 #if defined(EMBEDXCODE)
-#if defined(ENERGIA) && defined(__MSP432P401R__) // LaunchPad MSP432 on Energia MT only
-#include "Energia.h"
-#else
-#error LaunchPad MSP432 on Energia MT only
-#endif
+    #if defined(ENERGIA) && defined(__MSP432P401R__) // LaunchPad MSP432 on Energia MT only
+        #include "Energia.h"
+    #else
+        #error LaunchPad MSP432 on Energia MT only
+    #endif
 #endif // end IDE
 
 // Include application, user and local libraries
@@ -40,9 +40,9 @@
 // Setup
 void Semaphore3_setup()
 {
-//#if defined(optionSemaphore)
-//    mySemaphore.begin(1);
-//#endif
+    //#if defined(optionSemaphore)
+    //    mySemaphore.begin(1);
+    //#endif
 
     Serial.begin(115200);
     delay(30);

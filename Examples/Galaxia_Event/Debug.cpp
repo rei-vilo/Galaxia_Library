@@ -26,7 +26,7 @@
 // Declare the port for be used by //debug()
 Stream * debugPort = &Serial;
 
-void debug(const char * format, ... )
+void debug(const char * format, ...)
 {
     char buffer[256];
     va_list args;
@@ -36,7 +36,7 @@ void debug(const char * format, ... )
     va_end(args);
 }
 
-void debugln(const char * format, ... )
+void debugln(const char * format, ...)
 {
     char buffer[256];
     va_list args;

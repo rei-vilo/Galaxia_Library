@@ -35,7 +35,7 @@
 #include "Semaphore.h"
 #include "SWI.h"
 #if (SOLUTION == 3)
-#   include "HWI.h"
+    #include "HWI.h"
 #endif
 #include "Event.h"
 
@@ -47,7 +47,7 @@
 Semaphore mySemaphore;
 SWI mySWI;
 #if (SOLUTION == 3)
-HWI myHWI;
+    HWI myHWI;
 #endif
 uint32_t chrono;
 Event myEvent;
@@ -55,7 +55,7 @@ Event myEvent;
 // SWI function
 void functionSWI()
 {
-//    Serial.println("\tSWI");
+    //    Serial.println("\tSWI");
     chrono = millis();
     myEvent.send();
 }
@@ -72,7 +72,7 @@ void functionPUSH1()
 // HWI function
 void functionHWI()
 {
-//    Serial.println("\tHWI");
+    //    Serial.println("\tHWI");
     mySWI.post();
 }
 #endif
@@ -85,11 +85,11 @@ void rtosSetup()
     mySemaphore.begin(1);
     mySWI.begin(functionSWI);
     myEvent.begin();
-    
+
     mySemaphore.waitFor();
     Serial.println("rtosSetup");
     mySemaphore.post();
-    
+
 #if (SOLUTION == 2)
     // Solution 2: Energia interrupt
     pinMode(PUSH1, INPUT_PULLUP);
