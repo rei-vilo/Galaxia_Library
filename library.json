@@ -15,6 +15,6 @@
     },
     "url": "http://embeddedcomputing.weebly.com/exploring-rtos-with-galaxia.html",
     "frameworks": "energia",
-    "platforms": ["cc3200emt","msp432"]
+    "platforms": ["cc3200emt","msp432"],
     "examples": "Examples/*/*.ino"
 }
