@@ -29,7 +29,8 @@
 /// @details    The RTOS Event is encapsulated as a C++ object for easier use
 /// @note       Only a single Task can pend on an Event object at a time.
 ///
-class Event {
+class Event
+{
     private:
         Event_Handle EventHandle;
         static xdc_UInt EventId;

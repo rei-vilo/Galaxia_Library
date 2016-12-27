@@ -37,10 +37,8 @@
 /// @details    The RTOS Timer is encapsulated as a C++ object for easier use
 /// @note       Only one single timer available on the MSP432.
 ///
-class Timer {
-    private:
-        Timer_Handle TimerHandle;
-
+class Timer
+{
     public:
         ///
         /// @brief      Define the timer
@@ -59,7 +57,7 @@ class Timer {
         ///             digitalWrite(RED_LED, HIGH);
         ///         }
         /// @endcode
-        /// @bug        Some fucntions like Serial.print(); don't work :(
+    /// @bug        Some functions like Serial.print(); don't work :(
         ///
         void begin(void (*timerFunction)(void), uint32_t timerPeriod_unit, uint32_t unit = 1000);
 
@@ -72,6 +70,9 @@ class Timer {
         /// @brief      Stop the timer
         ///
         void stop();
+
+  private:
+    Timer_Handle TimerHandle;
 };
 
 #endif

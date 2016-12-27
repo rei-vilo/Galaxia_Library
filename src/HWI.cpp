@@ -77,6 +77,7 @@ void HWI::begin(uint8_t pinNumber, void (*functionHWI)(void), int mode)
     GPIO_setConfig(pinNumber, GPIO_CFG_IN_INT_ONLY | intType);
 
     GPIO_setCallback(pinNumber, (GPIO_CallbackFxn)functionHWI);
+    function = functionHWI;
 
     GPIO_enableInt(pinNumber);
 }

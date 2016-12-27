@@ -50,7 +50,8 @@
 /// @note       For w SWI with trigger, see the SWItrigger library.
 /// @deprecated SWI is no longer inlcuded in RTOS for Energia 0101E0017
 ///
-class SWI {
+class SWI
+{
     private:
         Swi_Handle SWIHandle;
 

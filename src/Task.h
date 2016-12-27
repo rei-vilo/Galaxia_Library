@@ -51,7 +51,8 @@
 /// @note       This implementation of Task differs from Energia MT.
 /// @n          Each sketch (.ino file) includes setup() and loop() for Energia MT.
 ///
-class Task {
+class Task
+{
     private:
         Task_Handle TaskHandle;
 

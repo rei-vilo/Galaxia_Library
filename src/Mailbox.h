@@ -37,7 +37,8 @@
 /// @warning    Messages must be of type typename used in declaration
 /// @note       Only a single task can pend on an Mailbox object at a time.
 ///
-template <typename mailboxType> class Mailbox {
+template <typename mailboxType> class Mailbox
+{
     private:
         Mailbox_Handle MailboxHandle;
         Mailbox_Params mboxParams;

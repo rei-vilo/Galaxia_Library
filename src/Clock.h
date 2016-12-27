@@ -34,7 +34,8 @@
 /// @details    The RTOS Clock is encapsulated as a C++ object for easier use
 /// @note       Multiple Clock objects possible.
 ///
-class Clock {
+class Clock
+{
     private:
         Clock_Handle ClockHandle;
         Clock_Params ClockParams;

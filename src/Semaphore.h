@@ -34,7 +34,8 @@
 /// @brief      RTOS Semaphore as object
 /// @details    The RTOS Semaphore is encapsulated as a C++ object for easier use
 ///
-class Semaphore {
+class Semaphore
+{
     private:
         Semaphore_Handle SemaphoreHandle;
         static xdc_UInt SemaphoreId;
@@ -48,7 +49,7 @@ class Semaphore {
 
         ///
         /// @brief      Create the semaphore
-        /// @param      count usually number of ressources to synchronise, default = 1
+    /// @param      count usually number of ressources to synchronise, default = 1 = mutex
         /// @note       For serial port, take 1.
         ///
         void begin(uint8_t count = 1);

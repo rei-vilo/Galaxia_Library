@@ -49,7 +49,8 @@
 /// @details    The RTOS SWI with trigger is encapsulated as a C++ object for easier use
 /// @deprecated SWI and thus SWItrigger are no longer inlcuded in RTOS for Energia 0101E0017
 ///
-class SWItrigger {
+class SWItrigger
+{
     private:
         Swi_Handle SWItriggerHandle;
 
