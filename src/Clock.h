@@ -36,45 +36,45 @@
 ///
 class Clock
 {
-    private:
-        Clock_Handle ClockHandle;
-        Clock_Params ClockParams;
+  private:
+    Clock_Handle ClockHandle;
+    Clock_Params ClockParams;
 
-    public:
-        ///
-        /// @brief      Define the Clock
-        ///
-        Clock();
+  public:
+    ///
+    /// @brief      Define the Clock
+    ///
+    Clock();
 
-        ///
-        /// @brief      Delete the Clock
-        ///
-        ~Clock();
+    ///
+    /// @brief      Delete the Clock
+    ///
+    ~Clock();
 
-        ///
-        /// @brief      Create the Clock
-        /// @param      ClockFunction function to be called
-        /// @param      ClockTimeOut_ms initial start delay
-        /// @param      ClockPeriod_ms period in ms, default = 0 for one-shot
-        /// @note       The function must be void ClockPeriod_ms()
-        /// @code   void ClockPeriod_ms()
-        ///         {
-        ///             digitalWrite(RED_LED, HIGH);
-        ///         }
-        /// @endcode
-        /// @bug        Some functions like Serial.print(); don't work :(
-        ///
-        void begin(void (*ClockFunction)(void), uint32_t ClockTimeOut_ms, uint32_t ClockPeriod_ms = 0);
+    ///
+    /// @brief      Create the Clock
+    /// @param      ClockFunction function to be called
+    /// @param      ClockTimeOut_ms initial start delay
+    /// @param      ClockPeriod_ms period in ms, default = 0 for one-shot
+    /// @note       The function must be void ClockPeriod_ms()
+    /// @code   void ClockPeriod_ms()
+    ///         {
+    ///             digitalWrite(RED_LED, HIGH);
+    ///         }
+    /// @endcode
+    /// @bug        Some functions like Serial.print(); don't work :(
+    ///
+    void begin(void (*ClockFunction)(void), uint32_t ClockTimeOut_ms, uint32_t ClockPeriod_ms = 0);
 
-        ///
-        /// @brief      Start the Clock
-        ///
-        void start();
+    ///
+    /// @brief      Start the Clock
+    ///
+    void start();
 
-        ///
-        /// @brief      Stop the Clock
-        ///
-        void stop();
+    ///
+    /// @brief      Stop the Clock
+    ///
+    void stop();
 };
 
 #endif

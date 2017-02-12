@@ -41,36 +41,36 @@
 
 // Core library for code-sense - IDE-based
 #if defined(WIRING) // Wiring specific
-    #include "Wiring.h"
+#include "Wiring.h"
 #elif defined(MAPLE_IDE) // Maple specific
-    #include "WProgram.h"
+#include "WProgram.h"
 #elif defined(ROBOTIS) // Robotis specific
-    #include "libpandora_types.h"
-    #include "pandora.h"
+#include "libpandora_types.h"
+#include "pandora.h"
 #elif defined(MPIDE) // chipKIT specific
-    #include "WProgram.h"
+#include "WProgram.h"
 #elif defined(DIGISPARK) // Digispark specific
-    #include "Arduino.h"
+#include "Arduino.h"
 #elif defined(ENERGIA) // LaunchPad specific
-    #include "Energia.h"
+#include "Energia.h"
 #elif defined(LITTLEROBOTFRIENDS) // LittleRobotFriends specific
-    #include "LRF.h"
+#include "LRF.h"
 #elif defined(MICRODUINO) // Microduino specific
-    #include "Arduino.h"
+#include "Arduino.h"
 #elif defined(TEENSYDUINO) // Teensy specific
-    #include "Arduino.h"
+#include "Arduino.h"
 #elif defined(REDBEARLAB) // RedBearLab specific
-    #include "Arduino.h"
+#include "Arduino.h"
 #elif defined(RFDUINO) // RFduino specific
-    #include "Arduino.h"
+#include "Arduino.h"
 #elif defined(SPARK) || defined(PARTICLE) // Particle / Spark specific
-    #include "application.h"
+#include "application.h"
 #elif defined(ESP8266) // ESP8266 specific
-    #include "Arduino.h"
+#include "Arduino.h"
 #elif defined(ARDUINO) // Arduino 1.0 and 1.5 specific
-    #include "Arduino.h"
+#include "Arduino.h"
 #else // error
-    #   error Platform not defined
+#   error Platform not defined
 #endif // end IDE
 
 
@@ -88,8 +88,8 @@ Clock myClock;
 uint8_t i = 0;
 uint32_t chrono[MAXCOUNT];
 
-#define initialPeriod 1000
-#define repeatedPeriod 100
+#define initialPeriod_ms 1000
+#define repeatedPeriod_ms 100
 
 uint8_t status = 0;
 const uint8_t myLED = BLUE_LED;
@@ -100,16 +100,19 @@ void clockFunction()
     i++;
     status = 1 - status;
     digitalWrite(myLED, status);
-    Serial.print(".");
+//    Serial.print(".");
 }
 
 
 // Add setup code
 void setup()
 {
+delay(500);
     Serial.begin(115200);
+    Serial.println();
+    Serial.println();
     Serial.println("*** Clock Library");
-
+delay(500);
     pinMode(myLED, OUTPUT);
 
     xdc_runtime_Types_FreqHz freq;
@@ -120,9 +123,10 @@ void setup()
     Serial.println(freq.lo, DEC);
     Serial.print("microsecondsToClockCycles = ");
     Serial.println(microsecondsToClockCycles(1), DEC);
-
+Serial.print("Clock_tickPeriod = ")
+    Serial.println(Clock_tickPeriod, DEC);
     Serial.print("myClock.begin... ");
-    myClock.begin(clockFunction, initialPeriod, repeatedPeriod); // 1000 ms = 1 s
+    myClock.begin(clockFunction, initialPeriod_ms, repeatedPeriod_ms); // 1000 ms = 1 s
     Serial.println("done");
 
     Serial.print("myClock.start... ");

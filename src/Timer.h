@@ -10,7 +10,7 @@
 /// @author		http://embeddedcomputing.weebly.com
 ///
 /// @date		Rei Vilo, Jun 17, 2015 09:29
-/// @version	102
+/// @version	103
 ///
 /// @copyright	(c) Rei Vilo, 2015-2016
 /// @copyright	CC = BY SA NC
@@ -36,40 +36,40 @@
 /// @brief      RTOS Timer as an object
 /// @details    The RTOS Timer is encapsulated as a C++ object for easier use
 /// @note       Only one single timer available on the MSP432.
+/// @bug        Don't use Serial with Timer, as it may freeze.
 ///
 class Timer
 {
-    public:
-        ///
-        /// @brief      Define the timer
-        /// @warning    Only one single timer available on the MSP432.
-        ///
-        Timer();
+  public:
+    ///
+    /// @brief      Define the timer
+    /// @warning    Only one single timer available on the MSP432.
+    ///
+    Timer();
 
-        ///
-        /// @brief      Create the timer
-        /// @param      timerFunction function to be called
-        /// @param      timerPeriod_unit period in unit
-        /// @param      unit in us, us = 1, ms = 1000, s = 1000000
-        /// @note       The function must be void timerPeriod_ms()
-        /// @code   void timerPeriod_ms()
-        ///         {
-        ///             digitalWrite(RED_LED, HIGH);
-        ///         }
-        /// @endcode
+    ///
+    /// @brief      Create the timer
+    /// @param      timerFunction function to be called
+    /// @param      ClockPeriod_ms period in ms
+    /// @note       The function must be void timerPeriod()
+    /// @code   void timerPeriod_ms()
+    ///         {
+    ///             digitalWrite(RED_LED, HIGH);
+    ///         }
+    /// @endcode
     /// @bug        Some functions like Serial.print(); don't work :(
-        ///
-        void begin(void (*timerFunction)(void), uint32_t timerPeriod_unit, uint32_t unit = 1000);
+    ///
+    void begin(void (*timerFunction)(void), uint32_t ClockPeriod_ms); //, uint32_t unit = 1000);
 
-        ///
-        /// @brief      Start the timer
-        ///
-        void start();
+    ///
+    /// @brief      Start the timer
+    ///
+    void start();
 
-        ///
-        /// @brief      Stop the timer
-        ///
-        void stop();
+    ///
+    /// @brief      Stop the timer
+    ///
+    void stop();
 
   private:
     Timer_Handle TimerHandle;

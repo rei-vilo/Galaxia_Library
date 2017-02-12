@@ -51,46 +51,46 @@
 ///
 class SWItrigger
 {
-    private:
-        Swi_Handle SWItriggerHandle;
+  private:
+    Swi_Handle SWItriggerHandle;
 
-    public:
-        ///
-        /// @brief      Define the SWItrigger
-        ///
-        SWItrigger();
+  public:
+    ///
+    /// @brief      Define the SWItrigger
+    ///
+    SWItrigger();
 
-        ///
-        /// @brief      Create the SWItrigger
-        /// @param      functionSWItrigger function to be called
-        /// @note       For serial port, take 1.
-        /// @note       The function must be void functionSWItrigger()
-        /// @code   void functionSWItrigger()
-        ///         {
-        ///             digitalWrite(RED_LED, HIGH);
-        ///         }
-        /// @endcode
-        /// @bug        functionSWItrigger(uint8_t) with uint8_t = Swi_getTrigger() doesn't work.
-        /// @todo       The idea is to have the same function as for Wire library with
-        ///             Wire.onReceive(void (*ReceiveEvent)(int)) and void ReceiveEvent(int howMany)
-        ///
-        // void begin(uint8_t trigger, void (*functionSWItrigger)(uint8_t));
-        void begin(uint8_t trigger, void (*functionSWItrigger)());
+    ///
+    /// @brief      Create the SWItrigger
+    /// @param      functionSWItrigger function to be called
+    /// @note       For serial port, take 1.
+    /// @note       The function must be void functionSWItrigger()
+    /// @code   void functionSWItrigger()
+    ///         {
+    ///             digitalWrite(RED_LED, HIGH);
+    ///         }
+    /// @endcode
+    /// @bug        functionSWItrigger(uint8_t) with uint8_t = Swi_getTrigger() doesn't work.
+    /// @todo       The idea is to have the same function as for Wire library with
+    ///             Wire.onReceive(void (*ReceiveEvent)(int)) and void ReceiveEvent(int howMany)
+    ///
+    // void begin(uint8_t trigger, void (*functionSWItrigger)(uint8_t));
+    void begin(uint8_t trigger, void (*functionSWItrigger)());
 
-        ///
-        /// @brief      Post a SWItrigger
-        ///
-        void post();
+    ///
+    /// @brief      Post a SWItrigger
+    ///
+    void post();
 
-        ///
-        /// @brief	Increment count and post
-        ///
-        void inc();
+    ///
+    /// @brief	Increment count and post
+    ///
+    void inc();
 
-        ///
-        /// @brief	Decrement count and post if count = 0
-        ///
-        void dec();
+    ///
+    /// @brief	Decrement count and post if count = 0
+    ///
+    void dec();
 
 };
 #endif

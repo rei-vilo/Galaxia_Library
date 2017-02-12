@@ -43,8 +43,13 @@ void Clock::begin(void (*ClockFunction)(void), uint32_t ClockTimeOut_ms, uint32_
     // ClockHandle = Clock_create( (Clock_FuncPtr)ClockFunction, microsecondsToClockCycles(ClockTimeOut_ms), &ClockParams, &eb);
 
     // Surprisingly, period already defined in ms for ClockParams.period andClockTimeOut_ms
-    ClockParams.period = ClockPeriod_ms;
-    ClockHandle = Clock_create((Clock_FuncPtr)ClockFunction, ClockTimeOut_ms, &ClockParams, &eb);
+    // Reason: Clock_tickPeriod = 1000
+    // ClockPeriod_ms = in ms
+    // ClockPeriod_ms * 1000 = in us
+    // ClockPeriod_ms * 1000 / Clock_tickPeriod = in ticks
+    
+    ClockParams.period = ((ClockPeriod_ms * 1000) / Clock_tickPeriod);
+    ClockHandle = Clock_create((Clock_FuncPtr)ClockFunction, (ClockTimeOut_ms * 1000) / Clock_tickPeriod, &ClockParams, &eb);
 
     if (ClockHandle == NULL)
     {

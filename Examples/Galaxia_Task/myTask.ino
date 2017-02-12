@@ -22,11 +22,11 @@
 
 // Core library for code-sense - IDE-based
 #if defined(EMBEDXCODE)
-    #if defined(ENERGIA_WITH_RTOS) || defined(ENERGIA_MT) // Energia MT only
-        #include "Energia.h"
-    #else
-        #   error Energia MT only
-    #endif // end Energia MT
+#if defined(ENERGIA_WITH_RTOS) || defined(ENERGIA_MT) // Energia MT only
+#include "Energia.h"
+#else
+#error Energia MT only
+#endif // end Energia MT
 #endif // end embedXcode IDE
 
 // Include application, user and local libraries

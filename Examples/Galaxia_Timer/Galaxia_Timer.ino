@@ -27,7 +27,7 @@
 /// @author		Rei Vilo
 /// @author		http://embeddedcomputing.weebly.com
 /// @date		Jun 17, 2015 09:28
-/// @version	101
+/// @version	102
 ///
 /// @copyright	(c) Rei Vilo, 2015
 /// @copyright	CC = BY SA NC
@@ -67,7 +67,7 @@ void timerFunction()
 {
     status = 1 - status;
     digitalWrite(myLED, status);
-    Serial.print("1 s. ");
+    // Serial.print("1 s. ");
 }
 
 /*
@@ -83,37 +83,37 @@ void timerFunction()
     ///
     void timerFunction2()
     {
-    Serial.print("1 s\t");
+    // Serial.print("1 s\t");
     }
 */
 
 // Add setup code
 void setup()
 {
-    Serial.begin(115200);
+    // Serial.begin(115200);
     pinMode(myLED, OUTPUT);
 
-    Serial.print(Timer_getNumTimers(), DEC);
-    Serial.println(" timers");
+    // Serial.print(Timer_getNumTimers(), DEC);
+    // Serial.println(" timers");
 
-    Serial.print("myTimer.begin... ");
+    // Serial.print("myTimer.begin... ");
     myTimer.begin(timerFunction, 500);
-    Serial.println("done");
+    // Serial.println("done");
 
     /*
-         Serial.print("myTimer2.begin... ");
+         // Serial.print("myTimer2.begin... ");
          myTimer2.begin(timerFunction2, 1000);
-         Serial.println("done");
+         // Serial.println("done");
     */
 
-    Serial.print("myTimer.start... ");
+    // Serial.print("myTimer.start... ");
     myTimer.start();
-    Serial.println("done");
+    // Serial.println("done");
 
     /*
-         Serial.print("myTimer2.start... ");
+         // Serial.print("myTimer2.start... ");
          myTimer2.start();
-         Serial.println("done");
+         // Serial.println("done");
     */
 }
 

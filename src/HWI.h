@@ -52,36 +52,46 @@
 ///
 class HWI
 {
-    private:
-        Hwi_Handle HWIHandle;
-        uint8_t HWIpin;
+  private:
+    Hwi_Handle HWIHandle;
+    uint8_t HWIpin;
     void (*function)(void);
 
-    public:
-        ///
-        /// @brief      Define the HWI
-        ///
-        HWI();
+  public:
+    ///
+    /// @brief      Define the HWI
+    ///
+    HWI();
 
-        ///
-        /// @brief      Create the HWI
-        /// @param      pinNumber function to be called
-        /// @param      functionHWI function to be called
-        /// @param      mode LOW, CHANGE, FALLING, RISING
-        /// @note       Same as attachInterrupt()
-        /// @note       The function must be void functionHWI()
-        /// @code   void functionHWI()
-        ///         {
-        ///             digitalWrite(RED_LED, HIGH);
-        ///         }
-        /// @endcode
-        ///
-        void begin(uint8_t pinNumber, void (*functionHWI)(void), int mode);
+    ///
+    /// @brief      Create the HWI
+    /// @param      pinNumber function to be called
+    /// @param      functionHWI function to be called
+    /// @param      mode LOW, CHANGE, FALLING, RISING
+    /// @note       Same as attachInterrupt()
+    /// @note       The function must be void functionHWI()
+    /// @code   void functionHWI()
+    ///         {
+    ///             digitalWrite(RED_LED, HIGH);
+    ///         }
+    /// @endcode
+    ///
+    void begin(uint8_t pinNumber, void (*functionHWI)(void), int mode);
 
-        ///
-        /// @brief      Clear the interrupt
-        /// @note       Same as detachInterrupt()
-        ///
-        void clearInterrupt();
+    ///
+    /// @brief      Clear the interrupt
+    /// @note       Same as detachInterrupt()
+    ///
+    void clearInterrupt();
+
+    ///
+    /// @brief      Disable the interrupt
+    ///
+    void disableInterrupt();
+
+    ///
+    /// @brief      Enable the interrupt
+    ///
+    void enableInterrupt();
 };
 #endif

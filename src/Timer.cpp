@@ -26,7 +26,7 @@ Timer::Timer()
     ;
 }
 
-void Timer::begin(void (*timerFunction)(void), uint32_t timerPeriod_unit, uint32_t unit)
+void Timer::begin(void (*timerFunction)(void), uint32_t ClockPeriod_ms) // , uint32_t unit)
 {
     Error_Block eb;
     Error_init(&eb);
@@ -38,7 +38,7 @@ void Timer::begin(void (*timerFunction)(void), uint32_t timerPeriod_unit, uint32
     Timer_Params params;
     Timer_Params_init(&params);
     params.periodType = Timer_PeriodType_MICROSECS;
-    params.period = timerPeriod_unit * unit; // 1 ms = 1000 us
+    params.period = (uint32_t)((uint64_t)(1000 * ClockPeriod_ms / Clock_tickPeriod)); // * unit; // 1 ms = 1000 us
     params.startMode = Timer_StartMode_USER; // Timer_start
 
     TimerHandle = Timer_create(TimerId, (Timer_FuncPtr)timerFunction, &params, &eb);

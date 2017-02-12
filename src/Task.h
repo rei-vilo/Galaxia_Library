@@ -53,31 +53,31 @@
 ///
 class Task
 {
-    private:
-        Task_Handle TaskHandle;
+  private:
+    Task_Handle TaskHandle;
 
-    public:
-        ///
-        /// @brief      Define the Task
-        ///
-        Task();
+  public:
+    ///
+    /// @brief      Define the Task
+    ///
+    Task();
 
-        ///
-        /// @brief      Create the Task
-        /// @param      functionTask function to be called
-        /// @param      priority 0 .. Task_numPriorities - 1
-        /// @note       The function must be void functionTask()
-        /// @code   void functionTask()
-        ///         {
-        ///             digitalWrite(RED_LED, HIGH);
-        ///         }
-        /// @endcode
-        ///
-        void begin(void (*functionTask)(void), int8_t priority);
+    ///
+    /// @brief      Create the Task
+    /// @param      functionTask function to be called
+    /// @param      priority 0 .. Task_numPriorities - 1
+    /// @note       The function must be void functionTask()
+    /// @code   void functionTask()
+    ///         {
+    ///             digitalWrite(RED_LED, HIGH);
+    ///         }
+    /// @endcode
+    ///
+    void begin(void (*functionTask)(void), int8_t priority);
 
-        //    ///
-        //    /// @brief      Post a Task
-        //    ///
-        //    void post();
+    //    ///
+    //    /// @brief      Post a Task
+    //    ///
+    //    void post();
 };
 #endif

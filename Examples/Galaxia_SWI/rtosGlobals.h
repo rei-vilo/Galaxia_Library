@@ -35,7 +35,7 @@
 #include "Semaphore.h"
 #include "SWI.h"
 #if (SOLUTION == 3)
-    #include "HWI.h"
+#include "HWI.h"
 #endif
 #include "Event.h"
 
@@ -47,7 +47,7 @@
 Semaphore mySemaphore;
 SWI mySWI;
 #if (SOLUTION == 3)
-    HWI myHWI;
+HWI myHWI;
 #endif
 uint32_t chrono;
 Event myEvent;

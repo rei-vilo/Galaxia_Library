@@ -52,31 +52,31 @@
 ///
 class SWI
 {
-    private:
-        Swi_Handle SWIHandle;
+  private:
+    Swi_Handle SWIHandle;
 
-    public:
-        ///
-        /// @brief      Define the SWI
-        ///
-        SWI();
+  public:
+    ///
+    /// @brief      Define the SWI
+    ///
+    SWI();
 
-        ///
-        /// @brief      Create the SWI
-        /// @param      functionSWI function to be called
-        /// @note       For serial port, take 1.
-        /// @note       The function must be void functionSWI()
-        /// @code   void functionSWI()
-        ///         {
-        ///             digitalWrite(RED_LED, HIGH);
-        ///         }
-        /// @endcode
-        ///
-        void begin(void (*functionSWI)(void));
+    ///
+    /// @brief      Create the SWI
+    /// @param      functionSWI function to be called
+    /// @note       For serial port, take 1.
+    /// @note       The function must be void functionSWI()
+    /// @code   void functionSWI()
+    ///         {
+    ///             digitalWrite(RED_LED, HIGH);
+    ///         }
+    /// @endcode
+    ///
+    void begin(void (*functionSWI)(void));
 
-        ///
-        /// @brief      Post a SWI
-        ///
-        void post();
+    ///
+    /// @brief      Post a SWI
+    ///
+    void post();
 };
 #endif
