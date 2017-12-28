@@ -17,7 +17,7 @@ Because SWI has been removed from RTOS for Energia MT 0101E0017, **SWI** And **S
 
 Make sure to select the variant of the board with `EMT`.
 
-### Content 
+### Elements 
 
 * Threads elements
 	* HWI
@@ -38,6 +38,10 @@ Notes
 2.	Mailbox supersedes Queue
 3. 	Clock recommended over Timer
   
+### <color=red>**Warning**</color>
+
+**The Galaxia library relies on the Energia MT implementation of RTOS. As so, some RTOS elements may work with one distribution of Energia but not antoher, and others have been removed from the last distribution of Energia MT.**
+
 ### Tutorials
 
 General documentation is available at [Exploring RTOS with Galaxia on Energia MT](http://embeddedcomputing.weebly.com/exploring-rtos-with-galaxia.html).
