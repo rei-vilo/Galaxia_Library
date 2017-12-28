@@ -38,9 +38,9 @@ Notes
 2.	Mailbox supersedes Queue
 3. 	Clock recommended over Timer
   
-### <font color="red">**Warning**</font>
+### <font color="red">Warning</font>
 
-<font color="red">**The Galaxia library relies on the Energia MT implementation of RTOS. As so, some RTOS elements may work with one distribution of Energia but not antoher, and others have been removed from the last distribution of Energia MT.**</font>
+<font color="red">The Galaxia library relies on the Energia MT implementation of RTOS. As so, some RTOS elements may work with one distribution of Energia but not antoher. Similarly, some RTOS elements may have been removed from the last distribution of Energia MT.</font>
 
 ### Tutorials
 
