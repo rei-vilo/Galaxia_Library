@@ -7,7 +7,14 @@ Galaxy Library with RTOS elements for Energia MT
 
 The Galaxia Library encapsulates RTOS elements as objects for an easier use. 
 
-It runs on the boards supported by Energia MT: LaunchPad MSP432, LaunchPad CC3200 and RedBearLab CC3200-based boards. 
+It runs on the boards supported by Energia MT: 
+
+* No IoT: LaunchPad MSP432P401R and MSP432P4111
+* sub-1 GHz: LaunchPad CC1310 and CC1312
+* BLE + sub-1 GHz: LaunchPad CC1350 and CC1352, LPSTK-CC1352
+* BLE: LaunchPad CC2652
+* WiFi: LaunchPad CC3200, CC3220, CC3235
+* Ethernet: LaunchPad MSP432E401Y
 
 The library comes with an umbrella header `Galaxia.h` for an easier `#include`.
 
