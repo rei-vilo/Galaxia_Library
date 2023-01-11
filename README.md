@@ -1,4 +1,7 @@
 # Galaxia Library
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dae24922f7b74c078b2977a48aad8fbf)](https://app.codacy.com/gh/rei-vilo/Galaxia_Library?utm_source=github.com&utm_medium=referral&utm_content=rei-vilo/Galaxia_Library&utm_campaign=Badge_Grade_Settings)
+
 Galaxy Library with RTOS elements for Energia MT
 
 *Why the Galaxia name? With LaunchPad, BoosterPack and Energia, let's stay in space and explore new galaxies!*
