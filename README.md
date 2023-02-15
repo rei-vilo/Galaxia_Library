@@ -3,6 +3,12 @@ Galaxy Library with RTOS elements for Energia MT
 
 *Why the Galaxia name? With LaunchPad, BoosterPack and Energia, let's stay in space and explore new galaxies!*
 
+> :warning:
+>
+>Energia, the fork of the Arduino IDE and SDK for the LaunchPad boards, is no longer maintained.
+>
+>The official tools from Texas Instruments are Code Composer Studio, based on Eclipse with an online variant, and the SimpleLink SDK for the ARM Cortex-M MCUs. 
+
 ### Content
 
 The Galaxia Library encapsulates RTOS elements as objects for an easier use. 
