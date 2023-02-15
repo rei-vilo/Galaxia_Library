@@ -5,7 +5,7 @@ Galaxy Library with RTOS elements for Energia MT
 
 *Why the Galaxia name? With LaunchPad, BoosterPack and Energia, let's stay in space and explore new galaxies!*
 
-> :warning:
+> **Warning**
 >
 >Energia, the fork of the Arduino IDE and SDK for the LaunchPad boards, is no longer maintained.
 >
