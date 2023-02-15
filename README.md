@@ -9,7 +9,7 @@ Galaxy Library with RTOS elements for Energia MT
 >
 >Energia, the fork of the Arduino IDE and SDK for the LaunchPad boards, is no longer maintained.
 >
->The official tools from Texas Instruments are Code Composer Studio, based on Eclipse with an online variant, and the SimpleLink SDK for the ARM Cortex-M MCUs. 
+>The official tools from Texas Instruments are [Code Composer Studio](https://www.ti.com/tool/CCSTUDIO), based on Eclipse with an online variant, and the SimpleLink SDK for the ARM Cortex-M [MSP432](https://www.ti.com/tool/SIMPLELINK-MSP432-SDK), [CC13xx (sub-1 GHz)](https://www.ti.com/tool/SIMPLELINK-CC13XX-CC26XX-SDK), [CC26xx (Bluetooth)](https://www.ti.com/tool/SIMPLELINK-CC13XX-CC26XX-SDK) and [CC32xx (WiFi)](https://www.ti.com/tool/SIMPLELINK-CC32XX-SDK) MCUs. 
 
 ### Content
 
