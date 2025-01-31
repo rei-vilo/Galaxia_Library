@@ -24,12 +24,12 @@
 // Code
 /*
  UInt HWIKey;
- 
+
  void disableHWI()
  {
  HWIKey = Hwi_disable();
  }
- 
+
  void restoreHWI()
  {
  Hwi_restore(HWIKey);
@@ -50,11 +50,11 @@ void HWI::begin(uint8_t pinNumber, void (*functionHWI)(void), int mode)
     //    Hwi_Params_init(&hwiParams);
     //
     //    HWIHandle = Hwi_create(interruptNumber, (Hwi_FuncPtr)functionHWI, &hwiParams, &eb);
-    
+
     // from msp432/cores/msp432/WInterrupts.c
     HWIpin = pinNumber;
     GPIO_PinConfig intType;
-    
+
     switch (mode)
     {
         case LOW:
@@ -73,12 +73,12 @@ void HWI::begin(uint8_t pinNumber, void (*functionHWI)(void), int mode)
             intType = GPIO_CFG_IN_INT_HIGH;
             break;
     }
-    
+
     GPIO_setConfig(pinNumber, GPIO_CFG_IN_INT_ONLY | intType);
-    
+
     GPIO_setCallback(pinNumber, (GPIO_CallbackFxn)functionHWI);
     function = functionHWI;
-    
+
     GPIO_enableInt(HWIpin);
 }
 

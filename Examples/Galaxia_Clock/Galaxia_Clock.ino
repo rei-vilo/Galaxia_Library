@@ -100,19 +100,19 @@ void clockFunction()
     i++;
     status = 1 - status;
     digitalWrite(myLED, status);
-//    Serial.print(".");
+    //    Serial.print(".");
 }
 
 
 // Add setup code
 void setup()
 {
-delay(500);
+    delay(500);
     Serial.begin(115200);
     Serial.println();
     Serial.println();
     Serial.println("*** Clock Library");
-delay(500);
+    delay(500);
     pinMode(myLED, OUTPUT);
 
     xdc_runtime_Types_FreqHz freq;
@@ -123,7 +123,7 @@ delay(500);
     Serial.println(freq.lo, DEC);
     Serial.print("microsecondsToClockCycles = ");
     Serial.println(microsecondsToClockCycles(1), DEC);
-Serial.print("Clock_tickPeriod = ")
+    Serial.print("Clock_tickPeriod = ")
     Serial.println(Clock_tickPeriod, DEC);
     Serial.print("myClock.begin... ");
     myClock.begin(clockFunction, initialPeriod_ms, repeatedPeriod_ms); // 1000 ms = 1 s

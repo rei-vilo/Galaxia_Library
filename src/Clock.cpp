@@ -47,7 +47,7 @@ void Clock::begin(void (*ClockFunction)(void), uint32_t ClockTimeOut_ms, uint32_
     // ClockPeriod_ms = in ms
     // ClockPeriod_ms * 1000 = in us
     // ClockPeriod_ms * 1000 / Clock_tickPeriod = in ticks
-    
+
     ClockParams.period = ((ClockPeriod_ms * 1000) / Clock_tickPeriod);
     ClockHandle = Clock_create((Clock_FuncPtr)ClockFunction, (ClockTimeOut_ms * 1000) / Clock_tickPeriod, &ClockParams, &eb);
 
